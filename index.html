@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isaal Sawab Counter</title>
+  <style>
+    /* Default styles for all screen sizes */
+    body {
+        background-image: url(./icqqc83nwznaz9qupfjfptxd34p9i7aj_result.png);
+        background-repeat: no-repeat;
+        background-size:220vh;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+    .container {
+      width: 90%;
+      max-width: 800px;
+      padding: 20px;
+      box-sizing: border-box;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #ffffff;
+      font-size: 30px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    button {
+      margin: 10px;
+      padding: 8px 20px;
+      font-size: 16px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #226ea0;
+    }
+    #counter {
+      margin-top: 20px;
+      font-size: 22px;
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      text-align: center;
+      color:black;
+      font-weight: bold;
+
+    }
+
+    /* Large tablet styles */
+    @media screen and (max-width: 991px) {
+      h1 {
+        font-size: 22px;
+      }
+      button {
+        padding: 6px 15px;
+        font-size: 14px;
+      }
+      #counter {
+        font-size: 16px;
+      }
+    }
+
+    /* Medium tablet styles */
+    @media screen and (max-width: 767px) {
+      h1 {
+        font-size: 20px;
+      }
+      button {
+        padding: 6px 15px;
+        font-size: 14px;
+      }
+      #counter {
+        font-size: 14px;
+      }
+    }
+
+    /* Phone styles */
+    @media screen and (max-width: 479px) {
+      h1 {
+        font-size: 18px;
+      }
+      button {
+        padding: 5px 12px;
+        font-size: 12px;
+      }
+      #counter {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>ایصال ثواب والدہ مرحومہ ابو عمار اسرار مدنی</h1>
+
+    <button onclick="showCount('قرآن پاک', 26)">قرآن پاک</button>
+    <button onclick="showCount('سورہ فاتحہ', 103410)">سورہ فاتحہ</button>
+    <button onclick="showCount('درود پاک', 462470)">درود پاک</button>
+    <button onclick="showCount('مختلف پارے', 273)">مختلف پارے</button>
+    <button onclick="showCount('سورہ یاسین', 681)">سورہ یاسین</button>
+    <button onclick="showCount('سورہ ملک', 1313)">سورہ ملک</button>
+    <button onclick="showCount('سورہ واقعہ', 30)">سورہ واقعہ</button>
+    <button onclick="showCount('آیۃ الکرسی', 1154)">آیۃ الکرسی</button>
+    <button onclick="showCount('قل شریف', 6792)">قل شریف</button>
+    <button onclick="showCount('کلمہ طیبہ', 22000)">کلمہ طیبہ</button>
+    <button onclick="showCount('عمرے کا ثواب', 1)">عمرے کا ثواب</button>
+    <p id="counter"></p>
+  </div>
+
+  <script>
+    let results = [];
+    
+    function showCount(itemName, count) {
+      const result = itemName + ': ' + count;
+      if (!results.includes(result)) {
+        results.push(result);
+        updateCounter();
+      }
+    }
+    
+    function updateCounter() {
+      document.getElementById('counter').innerHTML = results.length > 0 ? results.join('<br>') : 'No items selected';
+    }
+  </script>
+</body>
+</html>
